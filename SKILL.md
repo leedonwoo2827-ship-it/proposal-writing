@@ -78,14 +78,14 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 | `# 문서 제목` (첫 줄 1회만) | 문서 제목 | title | KoPubWorld돋움체 Bold 28pt 중앙 |
 | `# 1. 섹션명` 또는 `## 1. 섹션명` | 섹션 제목 | level 1 | KoPubWorld돋움체 Bold 18pt |
 | `### 1.1 소항목명` | 소항목 제목 | level 1 | KoPubWorld돋움체 Bold 18pt |
-| `#### □ 항목명` | □ 항목명 | level 2 | KoPubWorld바탕체 Medium 11pt |
+| `#### ● 항목명` | ● 항목명 | level 2 | KoPubWorld바탕체 Medium 11pt |
 | 일반 단락 텍스트 (헤딩 없음) | □ 단락 | level 3 | KoPubWorld바탕체 Medium 11pt |
-| `- 리스트 항목` | □/○ 항목 | level 3/4 | KoPubWorld바탕체 10pt |
+| `- 리스트 항목` | ○ 항목 | level 3/4 | KoPubWorld바탕체 10pt |
 | `##### ― 세부 설명` | ― 세부 설명 | level 3 | KoPubWorld바탕체 10pt |
 | `###### ※ 참고` | ※ 참고 | level 4 | KoPubWorld바탕체 10pt |
 
 > **기호 자동 추가 규칙**: `#####` 이하 항목에서 텍스트가 이미 기호(□ ○ ― ※ 등)로 시작하면
-> 스타일의 기호가 자동으로 추가되지 않는다. 따라서 `#### □ 소항목명` 처럼 직접 기호를 쓰면 된다.
+> 스타일의 기호가 자동으로 추가되지 않는다. 따라서 `#### ● 소항목명` 처럼 직접 기호를 쓰면 된다.
 
 ### 볼드(`**`) 처리
 
@@ -102,7 +102,7 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 
 # 1.1 훈련과정명
 
-#### □ 과정 명칭의 정의 및 기획 배경
+#### ● 과정 명칭의 정의 및 기획 배경
 
 본 훈련과정은 {{red:AI 기초(10차시), AI 심화(10차시)}} 등 총 5개 과정을 통합·재구성하였습니다.
 특히 {{green:SRT 기반 자막 데이터로 전 차시가 체계적으로 구조화}}되어 있습니다.
@@ -124,7 +124,7 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 | 스타일 레벨 | 기호 | 폰트 | 용도 |
 |------|------|------|------|
 | level 1 | (없음) | KoPubWorld돋움체 Bold 18pt | 섹션/소항목 제목 |
-| level 2 | (없음) | KoPubWorld바탕체 Medium 11pt | □ 기호 직접 작성하는 항목 |
+| level 2 | (없음) | KoPubWorld바탕체 Medium 11pt | ● 기호 직접 작성하는 항목 |
 | level 3 | □ 자동 | KoPubWorld바탕체 Medium 11pt | 일반 본문, 리스트 |
 | level 4 | ○ 자동 | KoPubWorld바탕체 Light 10pt | 들여쓰기 리스트 |
 | level 5 | ― (직접 작성) | KoPubWorld바탕체 Light 10pt | 세부 항목 |

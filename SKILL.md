@@ -78,11 +78,12 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 | `# 문서 제목` (첫 줄 1회만) | 문서 제목 | title | Noto Sans KR Bold, 22pt(12pt) 중앙 |
 | `# 1. 섹션명` 또는 `## 1. 섹션명` | 섹션 제목 | level 1 | Noto Sans KR Bold, 16pt(12pt) |
 | `### 1.1 소항목명` | 소항목 제목 | section_subtitle | Noto Sans KR Bold, 15pt(11pt) |
-| `#### 항목명` | □ 항목명 | level 4 | Noto Serif KR, 10pt |
-| 일반 단락 텍스트 (헤딩 없음) | □ 단락 | level 3 | Noto Serif KR, 10pt |
-| `- 리스트 항목` | □ 항목 | level 3/4 | Noto Serif KR, 15pt(10pt) |
-| `##### ― 세부 설명` | ― 세부 설명 | level 5 | Noto Serif KR, 15pt(10pt) |
-| `###### ※ 참고` | ※ 참고 | level 6 | Noto Serif KR, 15pt(10pt) |
+| `#### 항목명` | ○ 항목명 | level 4 | Noto Serif KR, 10pt |
+| 일반 단락 텍스트 (헤딩 없음) | (기호 없음) 단락 | level 2 | Noto Serif KR, 10pt |
+| `- 리스트 항목` | □ 항목 | level 3 | Noto Serif KR, 10pt |
+| `  - 들여쓰기 리스트` | ○ 항목 | level 4 | Noto Serif KR, 10pt |
+| `##### ― 세부 설명` | ― 세부 설명 | level 5 | Noto Serif KR, 10pt |
+| `###### ※ 참고` | ※ 참고 | level 6 | Noto Serif KR, 10pt |
 
 > **기호 자동 추가 규칙**: 기호(□)는 시스템이 자동으로 추가한다.
 > ● 기호는 사용하지 않는다. `#### 소항목명` 처럼 기호 없이 텍스트만 작성하면 된다.
@@ -125,10 +126,10 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 |------|------|------|------|
 | level 1 | (없음) | Noto Sans KR Bold, 16pt(12pt) | 섹션/소항목 제목 |
 | level 2 | (없음) | Noto Serif KR, 15pt(10pt) | 일반 본문 항목 |
-| level 3 | □ 자동 | Noto Serif KR, 15pt(10pt) | 일반 본문, 리스트 |
-| level 4 | □ 자동 | Noto Serif KR, 15pt(10pt) | 들여쓰기 리스트 |
-| level 5 | □ 자동 | Noto Serif KR, 15pt(10pt) | 세부 항목 (― 직접 작성 시 □ 생략) |
-| level 6 | □ 자동 | Noto Serif KR, 15pt(10pt) | 참고/주석 (※ 직접 작성 시 □ 생략) |
+| level 3 | □ 자동 | Noto Serif KR, 10pt | 일반 본문, 리스트 (leftMargin 31) |
+| level 4 | ○ 자동 | Noto Serif KR, 10pt | #### 항목, 들여쓰기 리스트 (leftMargin 41) |
+| level 5 | ― 자동 | Noto Serif KR, 10pt | ##### 세부 항목 (leftMargin 51) |
+| level 6 | ※ 자동 | Noto Serif KR, 10pt | ###### 참고/주석 (leftMargin 61) |
 | section_subtitle | (없음) | Noto Sans KR Bold, 11pt | 소항목 제목 (#### 사용) |
 
 ---

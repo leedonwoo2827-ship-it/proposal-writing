@@ -78,15 +78,30 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 | `# 문서 제목` (첫 줄 1회만) | 문서 제목 | title | Noto Sans KR Bold, 22pt(12pt) 중앙 |
 | `# 1. 섹션명` 또는 `## 1. 섹션명` | 섹션 제목 | level 1 | Noto Sans KR Bold, 16pt(12pt) |
 | `### 1.1 소항목명` | 소항목 제목 | section_subtitle | Noto Sans KR Bold, 15pt(11pt) |
-| `#### 항목명` | ○ 항목명 | level 4 | Noto Serif KR, 10pt |
+| `#### 항목명` | 항목명 | level 4 | Noto Serif KR, 10pt |
 | 일반 단락 텍스트 (헤딩 없음) | (기호 없음) 단락 | level 2 | Noto Serif KR, 10pt |
-| `- 리스트 항목` | □ 항목 | level 3 | Noto Serif KR, 10pt |
-| `  - 들여쓰기 리스트` | ○ 항목 | level 4 | Noto Serif KR, 10pt |
-| `##### ― 세부 설명` | ― 세부 설명 | level 5 | Noto Serif KR, 10pt |
-| `###### ※ 참고` | ※ 참고 | level 6 | Noto Serif KR, 10pt |
+| `◻ 본문 항목` (직접 기호 사용) | ◻ 항목 | level 3 | Noto Serif KR, 10pt (내어쓰기 15pt) |
+| `○ 세부 항목` (직접 기호 사용) | ○ 항목 | level 4 | Noto Serif KR, 10pt |
+| `― 세부 설명` (직접 기호 사용) | ― 세부 설명 | level 5 | Noto Serif KR, 10pt |
+| `※ 참고` (직접 기호 사용) | ※ 참고 | level 6 | Noto Serif KR, 10pt |
 
-> **기호 자동 추가 규칙**: 기호(□)는 시스템이 자동으로 추가한다.
-> ● 기호는 사용하지 않는다. `#### 소항목명` 처럼 기호 없이 텍스트만 작성하면 된다.
+> **⚠️ 중요: 기호 직접 사용 원칙**
+>
+> **기호 체계를 proposal-styles.json과 동일하게 사용하세요:**
+> - Level 3 (본문 항목): `◻` (White Medium Square, U+25FB) — 내어쓰기 15pt 적용
+> - Level 4 (세부 항목): `○`
+> - Level 5 (보충 설명): `―`
+> - Level 6 (참고/주석): `※`
+>
+> **작성 방법:**
+> - 마크다운 `-` 리스트 문법 대신 **기호를 직접 텍스트 앞에 붙여** 작성합니다
+> - 예: `◻ COURSEMOS 플랫폼 구축: 오픈소스 LMS 기반...`
+> - hwpx-writer는 기호를 자동 감지하여 올바른 스타일 레벨을 적용합니다
+>
+> **절대 사용 금지:**
+> - `□` (Black Square, U+25A1) — 한글 오피스에서 내어쓰기가 무시됨
+> - `●` (검은 원) — 사용하지 않음
+> - `-` 마크다운 리스트 문법 — 표 안에서 혼란 초래 가능
 
 ### 볼드(`**`) 처리
 
@@ -101,17 +116,17 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 
 # 1. 훈련과정 개요
 
-# 1.1 훈련과정명
+### 1.1 훈련과정명
 
 #### 과정 명칭의 정의 및 기획 배경
 
 본 훈련과정은 {{red:AI 기초(10차시), AI 심화(10차시)}} 등 총 5개 과정을 통합·재구성하였습니다.
 특히 {{green:SRT 기반 자막 데이터로 전 차시가 체계적으로 구조화}}되어 있습니다.
 
-- 데이터 수집 및 정제: SQL 활용 데이터 추출, 데이터 정제 및 전처리
-- 통계 분석 및 시각화: 통계적 검증, 인사이트 도출
+◻ 데이터 수집 및 정제: SQL 활용 데이터 추출, 데이터 정제 및 전처리
+◻ 통계 분석 및 시각화: 통계적 검증, 인사이트 도출
 
-##### ― 직무 역량 매핑 체계
+― 직무 역량 매핑 체계
 
 본 과정의 학습 내용은 산업 현장의 구체적 직무와 다음과 같이 매핑됩니다.
 ```
@@ -122,15 +137,15 @@ description: RFP 요구사항(Skill 1)과 사내 데이터(Skill 2)를 결합하
 
 > level 1만 제목체(돋움체). level 2~6은 본문(바탕체).
 
-| 스타일 레벨 | 기호 | 폰트 | 용도 |
+| 스타일 레벨 | 기호 (직접 사용) | 폰트 | 용도 |
 |------|------|------|------|
 | level 1 | (없음) | Noto Sans KR Bold, 16pt(12pt) | 섹션/소항목 제목 |
-| level 2 | (없음) | Noto Serif KR, 10pt | 일반 본문 항목 (leftMargin 8) |
-| level 3 | □ 자동 | Noto Serif KR, 10pt | 일반 본문, 리스트 (leftMargin 8) |
-| level 4 | ○ 자동 | Noto Serif KR, 10pt | #### 항목, 들여쓰기 리스트 (leftMargin 0) |
-| level 5 | ― 자동 | Noto Serif KR, 10pt | ##### 세부 항목 (leftMargin 8) |
-| level 6 | ※ 자동 | Noto Serif KR, 10pt | ###### 참고/주석 (leftMargin 16) |
-| section_subtitle | (없음) | Noto Sans KR Bold, 11pt | 소항목 제목 (#### 사용) |
+| level 2 | (없음) | Noto Serif KR, 10pt | 일반 본문 (leftMargin 0) |
+| level 3 | ◻ (White Square U+25FB) | Noto Serif KR, 10pt | 본문 항목 (내어쓰기 15pt, leftMargin 0) |
+| level 4 | ○ | Noto Serif KR, 10pt | 세부 항목 (내어쓰기 15.3pt, leftMargin 4) |
+| level 5 | ― | Noto Serif KR, 10pt | 보충 설명 (내어쓰기 15.3pt, leftMargin 8) |
+| level 6 | ※ | Noto Serif KR, 10pt | 참고/주석 (내어쓰기 15.3pt, leftMargin 12) |
+| section_subtitle | (없음) | Noto Sans KR Bold, 11pt | 소항목 제목 (### 사용) |
 
 ---
 
